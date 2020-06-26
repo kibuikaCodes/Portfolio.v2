@@ -10,7 +10,7 @@ const MainDiv = styled.div`
 
     @media (min-width: ${breakpoints.mobileMax}) {
         position: absolute;
-        bottom: 0;
+        bottom: -2;
         margin-bottom: 1em;
         width: 90vw;
     }
@@ -28,7 +28,7 @@ const FooterLinks = styled.div`
      padding-bottom: 1.5em;
 
      @media (max-width: ${breakpoints.mobileMax}) {
-        padding-bottom: .8em;
+        padding-bottom: 2.8em;
     }
 `;
 

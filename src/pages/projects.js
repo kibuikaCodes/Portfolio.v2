@@ -90,8 +90,8 @@ const ProjectCard = styled.div`
     @media (max-width: ${breakpoints.mobileMin}) {
         height: 18em;
         width: 20em;
-        margin-left: 0em;
-        margin-top: 1em;
+        margin-left: ${props => props.left ? '0em' : '0em'};
+        margin-top: ${props => props.top ? '0em' : '0em'};
     }
 `;
 
