@@ -3,7 +3,12 @@ import styled from 'styled-components'
 import { breakpoints } from '../Media';
 import MainImage from '../images/abstract.jpg';
 import Footer from '../components/footer';
-
+import EstatemobiImage from '../images/screenshots/estatemobi.JPG';
+import KejaTest from '../images/screenshots/Kejatest.JPG';
+import FarmPlus from '../images/screenshots/farm.JPG';
+import TUKDATA from '../images/screenshots/tukdata.JPG';
+import Keja from '../images/screenshots/keja.JPG';
+import Tusome from '../images/screenshots/tusome.JPG';
 
 const MainDiv = styled.div`
     height: 230vh;
@@ -20,7 +25,7 @@ const MainDiv = styled.div`
 
 
     @media (max-width: ${breakpoints.mobileMin}) {
-        height: 295vh;
+        height: 305vh;
         width: 100vw;
     }
     
@@ -40,7 +45,7 @@ const ProjectsTitle = styled.h1`
 `;
 
 const ProjectsDiv = styled.div`
-    margin-top: 2em;
+    margin-top: .5em;
     margin-bottom: 8em;
     width: 90vw;
     display: flex;
@@ -49,7 +54,7 @@ const ProjectsDiv = styled.div`
     @media (max-width: ${breakpoints.mobileMin}) {
         width: 100vw;
         margin-top: 1em;
-        margin-bottom: 3em;
+        margin-bottom: 2em;
     }
 
 `;
@@ -71,14 +76,14 @@ const ProjectCardsDiv = styled.div`
 `;
 
 const ProjectCard = styled.div`
-    height: 20em;
+    height: 22em;
     width: 28em;
-    background-color: white;
     margin-left: ${props => props.left ? '4em' : '0em'};
     margin-top: ${props => props.top ? '2em' : '0em'};
+    padding: .5em;
 
     :hover {
-        border: 2px solid white;
+        border: 1px solid white;
     }
 
     @media (max-width: ${breakpoints.mobileMin}) {
@@ -90,9 +95,10 @@ const ProjectCard = styled.div`
 `;
 
 const ProjectImageDiv = styled.div`
-    background-color: black;
     height: 15em;
     width: 28em;
+    border-radius: 20px;
+    
 
     @media (max-width: ${breakpoints.mobileMin}) {
         height: 14em;
@@ -102,19 +108,59 @@ const ProjectImageDiv = styled.div`
     }
 `;
 
+const ProjectImage = styled.img`
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    
+`;
+
 const ProjectTextDiv = styled.div`
-    height: 6em;
+    height: 8em;
     width: 28em;
+    display: flex;
+    flex-flow: column nowrap;
+
 
     @media (max-width: ${breakpoints.mobileMin}) {
         height: 5em;
         width: 20em;
+        margin-top: -1em;
         
         
     }
 
 `;
 
+const ProjectName = styled.p`
+    font-size: 1.7em;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-top: .4em;
+    color: white;
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        font-size: 1.5em;
+        
+        
+    }
+`;
+
+const ProjectLink = styled.a`
+    text-decoration: underline;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: -.4em;
+
+    :hover {
+        text-decoration: none;
+    }
+
+    
+    
+`;
 
 function Projects() {
     return (
@@ -124,24 +170,58 @@ function Projects() {
                 <ProjectsTitle>Projects I've worked on.</ProjectsTitle>
                 <ProjectCardsDiv>
                     <ProjectCard>
-                        <ProjectImageDiv></ProjectImageDiv>
-                        <ProjectTextDiv>kjedfio</ProjectTextDiv>
+                        <ProjectImageDiv>
+                            <ProjectImage src={EstatemobiImage} alt=''></ProjectImage>
+                        </ProjectImageDiv>
+                        <ProjectTextDiv>
+                            <ProjectName>EstateMobi Website</ProjectName>
+                            <ProjectLink href='https://estatemobi.netlify.app/' target='_blank'>View project &#62;</ProjectLink>
+                        </ProjectTextDiv>
                     </ProjectCard>
                     <ProjectCard left>
-                        <ProjectImageDiv></ProjectImageDiv>
-                        <ProjectTextDiv>jdf</ProjectTextDiv>
+                        <ProjectImageDiv>
+                            <ProjectImage src={KejaTest} alt=''></ProjectImage>
+                        </ProjectImageDiv>
+                        <ProjectTextDiv>
+                            <ProjectName>Keja API Test Website</ProjectName>
+                            <ProjectLink href='https://kejafrica.com/' target='_blank'>View project &#62;</ProjectLink>
+                        </ProjectTextDiv>
                     </ProjectCard>
                     <ProjectCard top>
-                        <ProjectImageDiv></ProjectImageDiv>
+                        <ProjectImageDiv>
+                            <ProjectImage src={FarmPlus} alt=''></ProjectImage>
+                        </ProjectImageDiv>
+                        <ProjectTextDiv>
+                            <ProjectName>Farm+ Website</ProjectName>
+                            <ProjectLink href='https://farmplus.netlify.app/' target='_blank'>View project &#62;</ProjectLink>
+                        </ProjectTextDiv>
                     </ProjectCard>
                     <ProjectCard top left>
-                        <ProjectImageDiv></ProjectImageDiv>
+                        <ProjectImageDiv>
+                            <ProjectImage src={TUKDATA} alt=''></ProjectImage>
+                        </ProjectImageDiv>
+                        <ProjectTextDiv>
+                            <ProjectName>TU-K Data Project (Website + API)</ProjectName>
+                            <ProjectLink href='https://tukdataweb.netlify.app/' target='_blank'>View project &#62;</ProjectLink>
+                        </ProjectTextDiv>
                     </ProjectCard>
                     <ProjectCard top>
-                        <ProjectImageDiv></ProjectImageDiv>
+                        <ProjectImageDiv>
+                            <ProjectImage src={Keja} alt=''></ProjectImage>
+                        </ProjectImageDiv>
+                        <ProjectTextDiv>
+                            <ProjectName>Keja.Africa</ProjectName>
+                            <ProjectLink href='https://keja.africa/' target='_blank'>View project &#62;</ProjectLink>
+                        </ProjectTextDiv>
                     </ProjectCard>
                     <ProjectCard top left>
-                        <ProjectImageDiv></ProjectImageDiv>
+                    <ProjectImageDiv>
+                            <ProjectImage src={Tusome} alt=''></ProjectImage>
+                        </ProjectImageDiv>
+                        <ProjectTextDiv>
+                            <ProjectName>Tusome Website</ProjectName>
+                            <ProjectLink href='https://tusome.netlify.app/' target='_blank'>View project &#62;</ProjectLink>
+                        </ProjectTextDiv>
                     </ProjectCard>
                 </ProjectCardsDiv>
             </ProjectsDiv>

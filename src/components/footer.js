@@ -6,7 +6,7 @@ import {breakpoints} from '../Media';
 const MainDiv = styled.div`
     position: absolute;
     bottom: 0;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 
     @media (min-width: ${breakpoints.mobileMax}) {
         position: absolute;
@@ -24,10 +24,10 @@ const FooterLinks = styled.div`
      flex-flow: row;
      align-items: center;
      justify-content: center;
-     padding-bottom: 3em;
+     padding-bottom: 1.5em;
 
      @media (max-width: ${breakpoints.mobileMax}) {
-        padding-bottom: .3em;
+        padding-bottom: .8em;
     }
 `;
 

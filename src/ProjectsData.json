@@ -1,0 +1,11 @@
+
+{
+    "projects": [
+        {
+            "key": "https://estatemobi.netlify.app/",
+            "name": "EstateMobi Website",
+            "link": "https://estatemobi.netlify.app/",
+            "src": "/src/images/screenshots/estatemobi.jpg"
+        }
+    ]
+}
