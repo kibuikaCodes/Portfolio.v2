@@ -1,10 +1,112 @@
 import React from 'react'
+import styled from 'styled-components';
+import { breakpoints } from '../Media';
+import MainImage from '../images/colored.jpg';
+import Footer from '../components/footer';
+
+
+
+const MainDiv = styled.div`
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8) ), url(${MainImage}) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    
+`;
+
+const ContactTitle = styled.h1`
+    font-size: 4em;
+    color: white;
+    font-weight: 800;
+    margin-top: 1.5em;
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        font-size: 3.5em;
+        font-weight: 800;
+        margin-top: 1.5em;
+    }
+`;
+
+const ContactTagline = styled.p`
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    width: 50%;
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        font-size: 1.5em;
+        width: 80%;
+    }
+`;
+
+// const ContactsDiv = styled.div`
+//     display: flex;
+//     flex-flow: column nowrap:
+//     align-items: center;
+// `;
+
+const Email = styled.a`
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    border-bottom: 2px solid white;
+
+
+    :hover {
+        border-bottom: none;
+    }
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        font-size: 1.3em;
+        margin-top: 2em;
+    }
+`;
+
+const Phone = styled.a`
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    border-bottom: 2px solid white;
+
+    :hover {
+        border-bottom: none;
+    }
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        font-size: 1.3em;
+    }
+
+`;
 
 function Contact() {
     return (
-        <div>
+        <MainDiv>
+            <ContactTitle>
+                Contact Me.
+            </ContactTitle>
+            <ContactTagline>
+                Feel free to reach out if you're looking for a developer, have a question or just want to connect.
+            </ContactTagline>
+            {/* <ContactsDiv> */}
+                <Email href="mailto:kibuikacodes@gmail.com">kibuikacodes@gmail.com</Email>
+                <br />
+                <Phone href="tel:+254740459940">+254 740 459 940</Phone>
+            {/* </ContactsDiv> */}
+            <Footer />
             
-        </div>
+        </MainDiv>
     )
 }
 
