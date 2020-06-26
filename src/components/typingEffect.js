@@ -5,7 +5,7 @@ import '../App.css';
 const Typer = () => {
   return (
     <ReactTypingEffect
-      text={["Hello.", "Ola.", "Habari.", "Niaje."]}
+      text={["Hello.", "Hola.", "Ciao.","Habari.","Bonjour.", "你好", "Hallo", "Niaje."]}
       className='typing-text'
       speed={300}
     />
