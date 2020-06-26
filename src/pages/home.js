@@ -44,7 +44,7 @@ const ContentDiv = styled.div`
 
 const DevDescription = styled.p`
     margin-top: 1.5em;
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: 200;
     line-height: 1.5;
     text-align: center;
@@ -59,7 +59,7 @@ const DevDescription = styled.p`
 
 const DevSkills = styled.p`
     margin-top: 1.5em;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 200;
     line-height: 1.5;
     text-align: center;
