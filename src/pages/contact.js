@@ -33,9 +33,9 @@ const ContactTitle = styled.h1`
     margin-top: 1.5em;
 
     @media (max-width: ${breakpoints.mobileMin}) {
-        font-size: 3.5em;
+        font-size: 2.5em;
         font-weight: 800;
-        margin-top: 1.5em;
+        margin-top: .5em;
     }
 `;
 
@@ -46,7 +46,7 @@ const ContactTagline = styled.p`
     width: 50%;
 
     @media (max-width: ${breakpoints.mobileMin}) {
-        font-size: 1.5em;
+        font-size: 1.2em;
         width: 80%;
     }
 `;
@@ -69,7 +69,7 @@ const Email = styled.a`
     }
 
     @media (max-width: ${breakpoints.mobileMin}) {
-        font-size: 1.3em;
+        font-size: 1.2em;
         margin-top: 2em;
     }
 `;
@@ -85,7 +85,7 @@ const Phone = styled.a`
     }
 
     @media (max-width: ${breakpoints.mobileMin}) {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
 `;
