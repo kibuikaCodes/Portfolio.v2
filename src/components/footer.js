@@ -12,6 +12,7 @@ const MainDiv = styled.div`
         position: absolute;
         bottom: 0;
         margin-bottom: 1em;
+        width: 90vw;
     }
 `;
 

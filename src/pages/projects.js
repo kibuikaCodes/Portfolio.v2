@@ -25,7 +25,7 @@ const MainDiv = styled.div`
 
 
     @media (max-width: ${breakpoints.mobileMin}) {
-        height: 305vh;
+        height: auto;
         width: 100vw;
     }
     
@@ -54,7 +54,7 @@ const ProjectsDiv = styled.div`
     @media (max-width: ${breakpoints.mobileMin}) {
         width: 100vw;
         margin-top: 1em;
-        margin-bottom: 2em;
+        margin-bottom: 5em;
     }
 
 `;
@@ -71,6 +71,7 @@ const ProjectCardsDiv = styled.div`
         flex-flow: column nowrap;
         align-items: center;
         justify-content: center;
+        margin-top: -1.5em;
     }
 
 `;
@@ -225,8 +226,7 @@ function Projects() {
                     </ProjectCard>
                 </ProjectCardsDiv>
             </ProjectsDiv>
-            <Footer />
-            
+                <Footer />            
         </MainDiv>
     )
 }
