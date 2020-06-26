@@ -44,14 +44,14 @@ const ContentDiv = styled.div`
 
 const DevDescription = styled.p`
     margin-top: 1.5em;
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: 200;
     line-height: 1.5;
     text-align: center;
 
     @media (max-width: ${breakpoints.mobileMin}) {
         margin-top: 1em;
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     
 
@@ -59,14 +59,14 @@ const DevDescription = styled.p`
 
 const DevSkills = styled.p`
     margin-top: 1.5em;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 200;
     line-height: 1.5;
     text-align: center;
 
     @media (max-width: ${breakpoints.mobileMin}) {
         margin-top: .5em;
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
 
     
