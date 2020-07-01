@@ -4,6 +4,7 @@ import MainImage from '../images/abstract-painting.jpg';
 import Typer from '../components/typingEffect';
 import Footer from '../components/footer';
 import {breakpoints} from '../Media';
+import SideBar from '../components/sidebar';
 
 const MainDiv = styled.div`
     height: 100vh;
@@ -36,7 +37,7 @@ const ContentDiv = styled.div`
     margin-top: 3em;
 
     @media (max-width: ${breakpoints.mobileMax}) {
-        margin-top: 2em;
+        margin-top: 8em;
     }
 
     
@@ -77,12 +78,28 @@ const FooterDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        display: none;
+    }
 `;
+
+const SideBarDiv = styled.div`
+    display: none;
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        display: block;
+        width: 100vw;
+    }
+`
 
 
 function Home() {
     return (
         <MainDiv>
+            <SideBarDiv>
+                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
+            </SideBarDiv>
             <ContentDiv>
                 <Typer />
                 <DevDescription style={{color: 'white'}}>I'm <em>Steve Kibuika</em> and I make things for the web. I work with people like you to build you a space on the interwebs. Through creative &amp; design thinking, I build classical websites that suit your needs and desires.</DevDescription>
