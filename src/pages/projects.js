@@ -9,6 +9,8 @@ import FarmPlus from '../images/screenshots/farm.JPG';
 import TUKDATA from '../images/screenshots/tukdata.JPG';
 import Keja from '../images/screenshots/keja.JPG';
 import Tusome from '../images/screenshots/tusome.JPG';
+import SideBar from '../components/sidebar';
+
 
 const MainDiv = styled.div`
     height: 230vh;
@@ -53,7 +55,7 @@ const ProjectsDiv = styled.div`
 
     @media (max-width: ${breakpoints.mobileMin}) {
         width: 100vw;
-        margin-top: 1em;
+        margin-top: 3em;
         margin-bottom: 5em;
     }
 
@@ -163,10 +165,32 @@ const ProjectLink = styled.a`
     
 `;
 
+const FooterDiv = styled.div`
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        display: none;
+    }
+`;
+
+const SideBarDiv = styled.div`
+    display: none;
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        display: block;
+        width: 100vw;
+    }
+`
+
 function Projects() {
     return (
         <MainDiv>
-            
+            <SideBarDiv>
+                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
+            </SideBarDiv>
             <ProjectsDiv>
                 <ProjectsTitle>Projects I've worked on.</ProjectsTitle>
                 <ProjectCardsDiv>
@@ -226,7 +250,9 @@ function Projects() {
                     </ProjectCard>
                 </ProjectCardsDiv>
             </ProjectsDiv>
-                <Footer />            
+                <FooterDiv>
+                    <Footer />
+                </FooterDiv>
         </MainDiv>
     )
 }

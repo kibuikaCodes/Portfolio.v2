@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { breakpoints } from '../Media';
 import MainImage from '../images/colored.jpg';
 import Footer from '../components/footer';
+import SideBar from '../components/sidebar';
+
 
 
 
@@ -35,7 +37,7 @@ const ContactTitle = styled.h1`
     @media (max-width: ${breakpoints.mobileMin}) {
         font-size: 2.5em;
         font-weight: 800;
-        margin-top: .5em;
+        margin-top: 3em;
     }
 `;
 
@@ -90,9 +92,32 @@ const Phone = styled.a`
 
 `;
 
+const FooterDiv = styled.div`
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        display: none;
+    }
+`;
+
+const SideBarDiv = styled.div`
+    display: none;
+
+    @media (max-width: ${breakpoints.mobileMin}) {
+        display: block;
+        width: 100vw;
+    }
+`
+
 function Contact() {
     return (
         <MainDiv>
+            <SideBarDiv>
+                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
+            </SideBarDiv>
             <ContactTitle>
                 Contact Me.
             </ContactTitle>
@@ -104,7 +129,9 @@ function Contact() {
                 <br />
                 <Phone href="tel:+254740459940">+254 740 459 940</Phone>
             {/* </ContactsDiv> */}
-            <Footer />
+            <FooterDiv>
+                <Footer />
+            </FooterDiv>
             
         </MainDiv>
     )
