@@ -5,7 +5,8 @@ import MainImage from '../images/colored.jpg';
 import Footer from '../components/footer';
 import SideBar from '../components/sidebar';
 
-
+import Github from '../images/github1.png';
+import Twitter from '../images/twitter1.png';
 
 
 const MainDiv = styled.div`
@@ -20,7 +21,7 @@ const MainDiv = styled.div`
     flex-flow: column nowrap;
     align-items: center;
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         height: 100vh;
         width: 100vw;
     }
@@ -34,7 +35,7 @@ const ContactTitle = styled.h1`
     font-weight: 800;
     margin-top: 1.5em;
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         font-size: 2.5em;
         font-weight: 800;
         margin-top: 3em;
@@ -47,7 +48,7 @@ const ContactTagline = styled.p`
     text-align: center;
     width: 50%;
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         font-size: 1.2em;
         width: 80%;
     }
@@ -70,7 +71,7 @@ const Email = styled.a`
         border-bottom: none;
     }
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         font-size: 1.2em;
         margin-top: 2em;
     }
@@ -86,7 +87,7 @@ const Phone = styled.a`
         border-bottom: none;
     }
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         font-size: 1.2em;
     }
 
@@ -98,7 +99,7 @@ const FooterDiv = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         display: none;
     }
 `;
@@ -106,11 +107,49 @@ const FooterDiv = styled.div`
 const SideBarDiv = styled.div`
     display: none;
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         display: block;
         width: 100vw;
     }
-`
+`;
+
+const IconDiv = styled.div`
+    right: 0px;
+    bottom: 7px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2em;
+
+    @media (max-width: ${breakpoints.mobileMax}) {
+        height: auto;
+        width: 50%;
+        bottom: 0px;
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin-top: 3em;
+    }
+`;
+
+const Icon = styled.img`
+    height: 3em;
+    width: 3em;
+    margin-top: ${props => props.top ? '2em' : '0em'};
+    color: white;
+
+    @media (max-width: ${breakpoints.mobileMax}) {
+        height: 2em;
+        width: 2em;
+        margin-top: ${props => props.top ? '0em' : '0em'};
+    }
+`;
+
 
 function Contact() {
     return (
@@ -129,6 +168,10 @@ function Contact() {
                 <br />
                 <Phone href="tel:+254740459940">+254 740 459 940</Phone>
             {/* </ContactsDiv> */}
+                <IconDiv>
+                    <a href='https://github.com/kibuikaCodes' target='_blank' rel="noopener noreferrer"><Icon src={Github} alt=''></Icon></a>
+                    <a href='https://twitter.com/home' target='_blank' rel="noopener noreferrer"><Icon src={Twitter} alt='' top></Icon></a>
+                </IconDiv>
             <FooterDiv>
                 <Footer />
             </FooterDiv>

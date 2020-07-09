@@ -20,7 +20,7 @@ export default props => {
       </a>
 
       <hr />
-      <p className='menu-email'>kibuikacodes@gmail.com</p>
+      <p className='menu-email'>kibuikasteve@gmail.com</p>
     </Menu>
   );
 };

@@ -26,7 +26,7 @@ const MainDiv = styled.div`
     justify-content: center;
 
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         height: auto;
         width: 100vw;
     }
@@ -41,7 +41,7 @@ const ProjectsTitle = styled.h1`
     color: white;
     margin-left: 3.2em;
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         margin-left: 1em;
     }
 `;
@@ -53,7 +53,7 @@ const ProjectsDiv = styled.div`
     display: flex;
     flex-flow: column;
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         width: 100vw;
         margin-top: 3em;
         margin-bottom: 5em;
@@ -68,9 +68,9 @@ const ProjectCardsDiv = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: column wrap;
         align-items: center;
         justify-content: center;
         margin-top: -1.5em;
@@ -89,7 +89,7 @@ const ProjectCard = styled.div`
         border: 1px solid white;
     }
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         height: 18em;
         width: 20em;
         margin-left: ${props => props.left ? '0em' : '0em'};
@@ -103,7 +103,7 @@ const ProjectImageDiv = styled.div`
     border-radius: 20px;
     
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         height: 14em;
         width: 20em;
         
@@ -126,7 +126,7 @@ const ProjectTextDiv = styled.div`
     flex-flow: column nowrap;
 
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         height: 5em;
         width: 20em;
         margin-top: -1em;
@@ -143,7 +143,7 @@ const ProjectName = styled.p`
     margin-top: .4em;
     color: white;
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         font-size: 1.5em;
         
         
@@ -171,7 +171,7 @@ const FooterDiv = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         display: none;
     }
 `;
@@ -179,7 +179,7 @@ const FooterDiv = styled.div`
 const SideBarDiv = styled.div`
     display: none;
 
-    @media (max-width: ${breakpoints.mobileMin}) {
+    @media (max-width: ${breakpoints.mobileMax}) {
         display: block;
         width: 100vw;
     }
